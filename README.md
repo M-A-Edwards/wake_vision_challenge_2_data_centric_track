@@ -41,7 +41,7 @@ First, install Docker on your machine:
 sudo docker run -it --rm -v "$(pwd):/tmp" -w /tmp tensorflow/tensorflow:2.19.0 python download_and_build_wake_vision_dataset.py your-api-token-goes-here
 ```
 
-💡 **Note**: Make sure to have at least 400 GB of free disk space.
+💡 **Note**: Make sure to have at least 600 GB of free disk space.
 
 ---
 
