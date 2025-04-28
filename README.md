@@ -70,8 +70,6 @@ sudo docker run --gpus all -it --rm -v $PWD:/tmp -w /tmp tensorflow/tensorflow:2
 - This trains the [MCUNet-VWW2 model](https://github.com/mit-han-lab/mcunet) on the original dataset.
 - Modify the dataset to enhance test accuracy while keeping the model architecture unchanged.
 
-💡 **Note**: The first execution may take several hours as it downloads the full dataset (~365 GB).
-
 ---
 
 ## 🎯 **Tips for Success**
