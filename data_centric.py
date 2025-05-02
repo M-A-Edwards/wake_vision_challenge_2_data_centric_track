@@ -8,7 +8,7 @@ input_shape = (144,144,3)
 color_mode = 'rgb'
 num_classes = 2
 
-batch_size = 512
+batch_size = 128
 epochs = 50
 learning_rate = 0.001
 
