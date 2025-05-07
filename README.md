@@ -76,7 +76,7 @@ sudo docker run --gpus all -it --rm -v $PWD:/tmp -w /tmp tensorflow/tensorflow:2
 
 - **Focus on Data Quality**: Explore label correction, data augmentation, and other preprocessing techniques.
 - **Stay Efficient**: The dataset is large, so plan your modifications carefully.
-- **Collaborate**: Join the community discussion on  [Discord](rd.gg/g9UPfw2d) to share ideas and tips!
+- **Collaborate**: Join the community discussion on  [Discord](https://discord.gg/g9UPfw2d) to share ideas and tips!
 
 ---
 
@@ -90,7 +90,7 @@ sudo docker run --gpus all -it --rm -v $PWD:/tmp -w /tmp tensorflow/tensorflow:2
 
 ## 📞 **Contact Us**
 
-Have questions or need help? Reach out on [Discord](rd.gg/g9UPfw2d).
+Have questions or need help? Reach out on [Discord](https://discord.gg/g9UPfw2d).
 
 ---
 
