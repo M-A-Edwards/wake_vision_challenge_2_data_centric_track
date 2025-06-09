@@ -5,22 +5,22 @@ import csv
 import sys
 import os
 
-APIKEY = sys.argv[1]
+# APIKEY = sys.argv[1]
 
-#download the dataset
-os.system(f"curl -L -O -J -H X-Dataverse-key:{APIKEY} https://dataverse.harvard.edu/api/access/dataset/:persistentId/?persistentId=doi:10.7910/DVN/1HOPXC")
+# #download the dataset
+# os.system(f"curl -L -O -J -H X-Dataverse-key:{APIKEY} https://dataverse.harvard.edu/api/access/dataset/:persistentId/?persistentId=doi:10.7910/DVN/1HOPXC")
 
-#unzip it
-os.system("unzip dataverse_files.zip")
+# #unzip it
+# os.system("unzip dataverse_files.zip")
 
-#delete zip file
-os.system("rm dataverse_files.zip")
+# #delete zip file
+# os.system("rm dataverse_files.zip")
 
-#move all extracted files in the current folder
-os.system("mv dataverse_files/* .")
+# #move all extracted files in the current folder
+# os.system("mv dataverse_files/* .")
 
-#delete void folder
-os.system("rmdir dataverse_files")
+# #delete void folder
+# os.system("rmdir dataverse_files")
 
 #build dataset
 path_to_dataset = Path('wake_vision')
