@@ -23,7 +23,7 @@ import os
 # os.system("rmdir dataverse_files")
 
 #build dataset
-path_to_dataset = Path('wake_vision')
+path_to_dataset = Path('/kaggle/temp/wake_vision')
 
 folders_and_file_names = list()
 
@@ -31,7 +31,7 @@ folders_and_file_names = list()
 img_names_0 = set()
 img_names_1 = set()
 
-with open('wake_vision_validation.csv', newline='') as f:
+with open('/kaggle/temp/wake_vision_validation.csv', newline='') as f:
     reader = csv.reader(f)
     data = list(reader)
     print(len(data[1:]))
@@ -51,7 +51,7 @@ folders_and_file_names.append({'folder': path_to_dataset / 'validation/1', 'file
 img_names_0 = set()
 img_names_1 = set()
 
-with open('wake_vision_test.csv', newline='') as f:
+with open('/kaggle/temp/wake_vision_test.csv', newline='') as f:
     reader = csv.reader(f)
     data = list(reader)
     print(len(data[1:-1]))
@@ -71,7 +71,7 @@ folders_and_file_names.append({'folder': path_to_dataset / 'test/1', 'file_names
 img_names_0 = set()
 img_names_1 = set()
 
-with open('wake_vision_train_large.csv', newline='') as f:
+with open('/kaggle/temp/wake_vision_train_large.csv', newline='') as f:
     reader = csv.reader(f)
     data = list(reader)
     print(len(data[1:-1]))
@@ -91,7 +91,7 @@ folders_and_file_names.append({'folder': path_to_dataset / 'train_large/1', 'fil
 img_names_0 = set()
 img_names_1 = set()
 
-with open('wake_vision_train_bbox.csv', newline='') as f:
+with open('/kaggle/temp/wake_vision_train_bbox.csv', newline='') as f:
     reader = csv.reader(f)
     data = list(reader)
     print(len(data[1:-1]))
@@ -115,12 +115,12 @@ path_to_unlabeled_images = path_to_dataset / 'unlabeled_images'
 path_to_unlabeled_images.mkdir(parents=True)
 
 #extract all compressed images and copy them in the corresponding folders
-for zipped_file in Path('.').glob('*.tar.gz') :
+for zipped_file in Path('/kaggle/temp/').glob('*.tar.gz') :
     print(zipped_file)
     tar = tarfile.open(zipped_file, 'r:gz')
     tar.extractall()
     tar.close()
-    images = set(Path('.').glob('*.jpg'))
+    images = set(Path('/kaggle/temp/').glob('*.jpg'))
     
     #copy extracted images to the respective folder
     for folder in folders_and_file_names :
@@ -134,14 +134,14 @@ for zipped_file in Path('.').glob('*.tar.gz') :
         shutil.copy(image, path_to_unlabeled_images)
     
     #delete extracted images
-    images = set(Path('.').glob('*.jpg'))
+    images = set(Path('/kaggle/temp').glob('*.jpg'))
     for image in images : 
         image.unlink()
 
-for zipped_file in Path('.').glob('*.tar.gz') :
+for zipped_file in Path('/kaggle/temp/').glob('*.tar.gz') :
     zipped_file.unlink()
 
-for csv_file in Path('.').glob('*.csv') :
+for csv_file in Path('/kaggle/temp/').glob('*.csv') :
     csv_file.unlink()
 
 print(f"Dataset saved in folder: {path_to_dataset}")
