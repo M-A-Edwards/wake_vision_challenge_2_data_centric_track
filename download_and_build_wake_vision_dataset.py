@@ -118,7 +118,7 @@ path_to_unlabeled_images.mkdir(parents=True)
 for zipped_file in Path('/kaggle/temp/').glob('*.tar.gz') :
     print(zipped_file)
     tar = tarfile.open(zipped_file, 'r:gz')
-    tar.extractall()
+    tar.extractall(path='/kaggle/temp/')
     tar.close()
     images = set(Path('/kaggle/temp/').glob('*.jpg'))
     
