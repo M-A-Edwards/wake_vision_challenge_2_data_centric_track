@@ -48,7 +48,8 @@ Due to computational limitations, training was performed in stages on progressiv
 
 1. Initial training on `train-99`  
 2. Expanded training on `train-99` + `train-11`  
-3. Final training using `train-99`, `train-11`, and `train-12`
+3. Training using `train-99`, `train-11`, and `train-12`
+4. Final training using `train-11`, `train-12`, `train-56`, `train-65`, `train-69`, `train-88` and `train-99`
 
-Each iteration benefited from the data correction and augmentation methods, resulting in a consistent accuracy gain of **3–4%**. The final model achieved an accuracy of **80.96%**.
+Each iteration benefited from the label correction and augmentation methods, resulting in a consistent accuracy gain of **3–5%**. The final model achieved an accuracy of **83.50%** over the mentioned subset(4).
 
