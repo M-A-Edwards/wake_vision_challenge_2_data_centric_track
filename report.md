@@ -50,5 +50,5 @@ Due to computational limitations, training was performed in stages on progressiv
 2. Expanded training on `train-99` + `train-11`  
 3. Final training using `train-99`, `train-11`, and `train-12`
 
-Each iteration benefited from the data correction and augmentation methods, resulting in a consistent accuracy gain of **2–3%**. The final model achieved an accuracy of **79.30%**.
+Each iteration benefited from the data correction and augmentation methods, resulting in a consistent accuracy gain of **2–3%**. The final model achieved an accuracy of **80.11%**.
 
