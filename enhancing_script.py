@@ -146,10 +146,10 @@ def get_advanced_augmentation():
     return tf.keras.Sequential([
         tf.keras.layers.RandomFlip("horizontal"),
         tf.keras.layers.RandomRotation(0.15),
-        tf.keras.layers.RandomZoom(0.1),
-        tf.keras.layers.RandomTranslation(0.05, 0.05),
-        tf.keras.layers.RandomContrast(0.15),
         tf.keras.layers.RandomBrightness(0.1),
+        tf.keras.layers.RandomContrast(0.15),
+        tf.keras.layers.RandomZoom(0.3),
+        tf.keras.layers.RandomTranslation(0.2, 0.2),
     ])
 
 def visualize_augmentation(dataset, augmentation):
