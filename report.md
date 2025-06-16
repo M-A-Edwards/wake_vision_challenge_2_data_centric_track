@@ -27,8 +27,8 @@ The `get_advanced_augmentation` function applies a set of soft augmentations:
 
 -  Horizontal flip  
 -  Rotation up to **15%**  
--  Zoom up to **30%**  
--  Translation up to **20%**  
+-  Zoom up to **35%**  
+-  Translation up to **25%**  
 -  Contrast adjustment up to **15%**  
 -  Brightness adjustment up to **10%**
 
@@ -50,5 +50,5 @@ Due to computational limitations, training was performed in stages on progressiv
 2. Expanded training on `train-99` + `train-11`  
 3. Final training using `train-99`, `train-11`, and `train-12`
 
-Each iteration benefited from the data correction and augmentation methods, resulting in a consistent accuracy gain of **3–4%**. The final model achieved an accuracy of **80.15%**.
+Each iteration benefited from the data correction and augmentation methods, resulting in a consistent accuracy gain of **3–4%**. The final model achieved an accuracy of **80.96%**.
 
