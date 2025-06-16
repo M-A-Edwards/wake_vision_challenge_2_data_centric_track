@@ -52,8 +52,3 @@ Due to computational limitations, training was performed in stages on progressiv
 
 Each iteration benefited from the data correction and augmentation methods, resulting in a consistent accuracy gain of **2–3%**. The final model achieved an accuracy of **79.30%**.
 
----
-
-## 📌 Summary
-
-This submission highlights the impact of focused data-centric improvements—specifically, correction of mislabeled data and well-tuned augmentations—on overall model performance within resource-constrained training conditions.
