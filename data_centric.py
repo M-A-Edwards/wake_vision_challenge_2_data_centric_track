@@ -1,6 +1,7 @@
 import tensorflow as tf
 import numpy as np
 import os
+from enhancing_script import *
 
 model_name = 'wv_quality_mcunet-320kb-1mb_vww'
 
@@ -327,11 +328,11 @@ validation_ds = tf.keras.utils.image_dataset_from_directory(
 )
 
 #data augmentation
-data_augmentation = tf.keras.Sequential([
-    tf.keras.layers.RandomFlip("horizontal"),
-    tf.keras.layers.RandomRotation(0.2)])
+# data_augmentation = tf.keras.Sequential([
+#     tf.keras.layers.RandomFlip("horizontal"),
+#     tf.keras.layers.RandomRotation(0.2)])
 
-train_ds = train_ds.map(lambda x, y: (data_augmentation(x, training=True), y), num_parallel_calls=tf.data.AUTOTUNE).prefetch(buffer_size=tf.data.AUTOTUNE)
+train_ds = train_ds.map(lambda x, y: (get_advanced_augmentation(x, training=True), y), num_parallel_calls=tf.data.AUTOTUNE).prefetch(buffer_size=tf.data.AUTOTUNE)
 validation_ds = validation_ds.prefetch(buffer_size=tf.data.AUTOTUNE)
 
 model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(
